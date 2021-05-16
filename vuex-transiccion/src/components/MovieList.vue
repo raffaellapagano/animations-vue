@@ -2,9 +2,9 @@
     <div>
         
         <div class="row" v-if="movies.length > 0">
-            <transition-group name="fade"> 
+            <FadeGroup class="content__list"> 
             <movie :movie="movie" v-for="movie in movies" :key="movie.id"></movie>
-            </transition-group>
+            </FadeGroup>
         </div>
         
         
@@ -16,13 +16,13 @@
 <script>
 import Movie from './MovieItem'
 import {mapGetters} from 'vuex'
-// import FadeGroup from './Animations/FadeGroup'
+import FadeGroup from './Animations/FadeGroup'
 
 
 export default ({
     components: {
         Movie,
-        // FadeGroup
+        FadeGroup
     },
     computed:{
         ...mapGetters({
@@ -31,4 +31,11 @@ export default ({
     }
 })
 </script>
+
+<style scoped>
+.content__list{
+    display: flex;
+    flex-flow: wrap;
+}
+</style>
 
