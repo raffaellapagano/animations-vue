@@ -2,7 +2,8 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Nivell 1</router-link> |
-      <router-link to="/about">Nivell 2-3</router-link>
+      <router-link to="/nivell2">Nivell 2</router-link> |
+      <router-link to="/nivell3">Nivell 3</router-link>
     </div>
     <router-view/>
   </div>
